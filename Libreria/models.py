@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Empleados(models.Model):
     Nombre = models.CharField(max_length=50)
     Usuario = models.TextField()
@@ -9,30 +8,29 @@ class Empleados(models.Model):
     def __str__(self):
         return self.Nombre
 
-
-class Categorias(models.Model):
-    Nombre = models.CharField(max_length=50)
-    Descripcion = models.TextField()
+class Categoria(models.Model):  # Asegúrate de que el nombre es 'Categoria'
+    nombre = models.CharField(max_length=100)
+    descripcion = models.TextField()
 
     def __str__(self):
-        return self.Nombre
+        return self.nombre
 
 class Productos(models.Model):
     Nombre = models.CharField(max_length=50)
     Precio = models.IntegerField()
     Empleados = models.ForeignKey(Empleados, on_delete=models.PROTECT)
-    Categorias = models.ForeignKey(Categorias, on_delete=models.PROTECT)
+    Categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, null=True, default=None)
     Imagen = models.ImageField(upload_to="Producto", null=True)
 
     def __str__(self):
         return self.Nombre
+    
 
 class MetodoPago(models.Model):
     Nombre = models.CharField(max_length=50)
 
     def __str__(self):
         return self.Nombre
-
 
 class Clientes(models.Model):
     Nombre = models.CharField(max_length=50)
@@ -52,6 +50,4 @@ class FacturaPagos(models.Model):
 
     def __str__(self):
         return f"Factura {self.id} - {self.Fecha}"
-
-
 

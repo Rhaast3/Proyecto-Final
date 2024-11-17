@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 
-{% block titulo %} Editar Producto {% endblock %}
+{% block titulo %}Editar Producto{% endblock %}
 
 {% block contenido %} 
-
 <div class="card">
     <div class="card-header">Editar producto</div>
     <div class="card-body">
         <h4 class="card-title">Datos del producto</h4>
-        
-        {% include 'Productos/formProducto.html' %}
 
+        <!-- Incluye el formulario de producto -->
+        <form enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Renderiza el formulario -->
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        </form>
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>
-
 {% endblock %}

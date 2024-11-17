@@ -1,19 +1,18 @@
 {% extends "base.html" %}
 
-{% block titulo %} Añadir metodo de pago{% endblock %}
+{% block titulo %} Añadir método de pago {% endblock %}
 
 {% block contenido %} 
 
 <div class="card">
-    <div class="card-header">Agregar metodo de pago</div>
+    <div class="card-header">Agregar método de pago</div>
     <div class="card-body">
-        <h4 class="card-title">Datos del metodo de pago</h4>
+        <h4 class="card-title">Datos del método de pago</h4>
         
         {% include 'MetodoPago/FormMetodoPago.html' %}
 
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>
-
 
 {% endblock %}

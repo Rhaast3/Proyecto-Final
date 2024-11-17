@@ -2,18 +2,18 @@
 
 {% block titulo %} Crear producto {% endblock %}
 
-{% block contenido %} 
-
+{% block contenido %}
 <div class="card">
     <div class="card-header">Agregar producto</div>
     <div class="card-body">
         <h4 class="card-title">Datos del producto</h4>
         
-        {% include 'Productos/formProducto.html' %}
-
+        <form enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Esto mostrará todos los campos del formulario automáticamente -->
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>
-
-
 {% endblock %}

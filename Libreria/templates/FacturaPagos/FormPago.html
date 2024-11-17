@@ -1,13 +1,34 @@
-<form enctype="multipart/form-data" method="post">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
     <div class="mb-3">
-        <label for="" class="form-label">Metodo de pago</label>
-        <input type="text"
-            class="form-control" name="" id="" aria-describedby="helpId" placeholder="Metodo de pago">
-
+        <label for="id_Fecha" class="form-label">Fecha</label>
+        <input type="date" class="form-control" id="id_Fecha" name="Fecha" value="{{ form.Fecha.value|default_if_none:'' }}">
     </div>
-    
 
+    <div class="mb-3">
+        <label for="id_CantidadProductos" class="form-label">Cantidad de Productos</label>
+        <input type="number" class="form-control" id="id_CantidadProductos" name="CantidadProductos" value="{{ form.CantidadProductos.value|default_if_none:'' }}">
+    </div>
 
+    <div class="mb-3">
+        <label for="id_Valor" class="form-label">Valor</label>
+        <input type="number" class="form-control" id="id_Valor" name="Valor" value="{{ form.Valor.value|default_if_none:'' }}">
+    </div>
 
+    <div class="mb-3">
+        <label for="id_Productos" class="form-label">Productos</label>
+        {{ form.Productos }}
+    </div>
 
+    <div class="mb-3">
+        <label for="id_MetodoPago" class="form-label">Método de Pago</label>
+        {{ form.MetodoPago }}
+    </div>
+
+    <div class="mb-3">
+        <label for="id_Clientes" class="form-label">Clientes</label>
+        {{ form.Clientes }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>

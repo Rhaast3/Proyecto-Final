@@ -1,18 +1,299 @@
 {% extends "base.html" %}
 
-{% block titulo %} Inicio {% endblock %}
+{% block titulo %}Inicio{% endblock %}
 
-{% block contenido %} 
+{% block contenido %}
 
-<div class="p-5 bg-ligth">
-    <div class="container">
-        <h1 class="display3">Bienvenidos de Roma Luxury Shop</h1>
-        <p class="lead">Comenzar a leer la informacion</p>
-        <hr class="my-2">
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Ir al catalogo</a>
-        </p>
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="TituloPrincipal">Roma Luxury Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+    <h1 class="Titulo">Roma Luxury Shop <span class="ClassFreelancer">Freelancer</span></h1>
+</header>
+
+<section class="hero">
+    <div class="Contenido-Hero">
+        <h2 class="SubtituloPrincipal">Diseño de moda <span>Exclusiva</span></h2>
+        <div class="ImagePrincipal_Verdad">
+            <img class="ImagenPrincipalEdit" src="{% static 'img/ImagenPrincipal.jpeg' %}" alt="ImagenPrincipal">
+        </div>
+        <div class="Ubicación">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-mood-pin">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M21 12a9 9 0 1 0 -8.352 8.977" />
+                <path d="M9 10h.01" />
+                <path d="M15 10h.01" />
+                <path d="M9.5 15c.658 .672 1.56 1 2.5 1c.102 0 .203 -.004 .304 -.012" />
+                <path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
+                <path d="M19 18v.01" />
+            </svg>
+            <p>Acacias, Meta</p>
+        </div>
+        <a class="Boton Boton-catalogo" href="{% url 'Catalogo' %}">Ir al catálogo</a>
     </div>
+
+</section>
+
+<div class="Logo">
+    <img class="Logo_Clas" src="{% static 'ImagenProduct/Logo.jpeg' %}" alt="Imagen Logo">
 </div>
+
+<main class="contenedor Sombra tres-columnas">
+    <h2>Mis servicios</h2>
+    <div class="servicios">
+        <section class="servicio">
+            <h3>¿Quienes somos?</h3>
+            <div class="icono">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="28"  height="28"  viewBox="0 0 24 24"  fill="none"  stroke="#0dce24"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-palette">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+                    <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi cum unde consectetur harum expedita voluptate maiores accusamus odio! Facere sequi praesentium, magnam exercitationem commodi esse atque a sint repellendus?</p>
+        </section>
+
+        <section class="servicio">
+            <h3>Que nos dedicamos a vender</h3>
+            <div class="icono">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 19l.01 0" />
+                    <path d="M7 19a4 4 0 0 0 -4 -4" />
+                    <path d="M11 19a8 8 0 0 0 -8 -8" /><path d="M15 19h3a3 3 0 0 0 3 -3v-8a3 3 0 0 0 -3 -3h-12a3 3 0 0 0 -2.8 2" /></svg>
+
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="28"  height="28"  viewBox="0 0 24 24"  fill="none"  stroke="#0dce24"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-device-ipad">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M18 2a3 3 0 0 1 2.995 2.824l.005 .176v14a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005h12zm-3 15h-6l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h6l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z" /></svg>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi cum unde consectetur harum expedita voluptate maiores accusamus odio! Facere sequi praesentium, magnam exercitationem commodi esse atque a sint repellendus?</p>
+        </section>
+
+        <section class="servicio">
+            <h3>Donde nos ubicamos</h3>
+            <div class="icono">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="28"  height="28"  viewBox="0 0 24 24"  fill="none"  stroke="#0dce24"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-cards">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3.604 7.197l7.138 -3.109a.96 .96 0 0 1 1.27 .527l4.924 11.902a1 1 0 0 1 -.514 1.304l-7.137 3.109a.96 .96 0 0 1 -1.271 -.527l-4.924 -11.903a1 1 0 0 1 .514 -1.304z" />
+                    <path d="M15 4h1a1 1 0 0 1 1 1v3.5" />
+                    <path d="M20 6c.264 .112 .52 .217 .768 .315a1 1 0 0 1 .53 1.311l-2.298 5.374" /></svg>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi cum unde consectetur harum expedita voluptate maiores accusamus odio! Facere sequi praesentium, magnam exercitationem commodi esse atque a sint repellendus?</p>
+        </section>
+    </div>
+</main>
+
+<footer>
+    
+</footer>
+
+</body>
+</html>
+
+<style>
+    :root{
+    --Blanco:#ffffff;
+    --Oscuro:#212121;
+    --Primario:#ffC107;
+    --Secundario: #0097A7;
+    --Gris: #757575;
+    --RojoDanger: #dc3545;
+    }
+
+    .Titulo,
+    .SubtituloPrincipal{
+        
+        text-align: center;
+    }
+    h2{
+        color: #FF0000;
+    }
+    
+    .ClassFreelancer{
+        color: #FF0000;
+    }
+
+
+    .Sombra{
+    -webkit-box-shadow: 10px 10px 11px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: 10px 10px 11px 0px rgba(0,0,0,0.54);
+    box-shadow: 10px 10px 11px 0px rgba(0,0,0,0.54);
+    background-color: var(--Blanco);
+    padding: 2rem;
+    border-radius: 1rem;}
+/*
+    .contenedor{
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+    }
+
+    .tres-columnas{
+        display: flex;
+        gap: 2rem;
+    }*/
+    .contenedor.Sombra.tres-columnas {
+    display: flex;
+    gap: 2rem; /* Espacio entre columnas */
+    flex-wrap: wrap; /* Permite que las secciones se envuelvan si es necesario */
+    justify-content: space-between; /* Distribuye el espacio entre columnas */
+}
+
+.servicios {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; /* Permite que las secciones se envuelvan si es necesario */
+}
+
+.servicio {
+    flex: 1; /* Hace que cada sección ocupe un espacio igual */
+    min-width: calc(33.33% - 2rem); /* Ajusta el ancho para que haya tres columnas con espacio entre ellas */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    background-color: var(--Blanco);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.servicio .icono {
+    height: 5rem; /* Ajusta la altura del contenedor del ícono */
+    width: 5rem; /* Ajusta el ancho del contenedor del ícono */
+    background-color: #BEC0B3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* Centra el ícono horizontalmente */
+    align-items: center; /* Centra el ícono verticalmente */
+    margin: 0 auto 1rem; /* Centra el contenedor de íconos horizontalmente y agrega un margen inferior */
+}
+
+.icon-tabler {
+    height: 2.5rem; /* Ajusta el tamaño del ícono */
+    width: 2.5rem; /* Ajusta el tamaño del ícono */
+}
+
+.Boton-catalogo {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--Primario); /* Usa tu color primario o cambia al que prefieras */
+    color: var(--Blanco); /* Color del texto */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 1rem; /* Espacio superior */
+}
+
+.Boton-catalogo:hover {
+    background-color: var(--Secundario); /* Cambia el color al pasar el ratón */
+}
+
+.hero {
+    text-align: center;
+}
+
+header {
+    margin-bottom: 2rem; /* Agrega espacio debajo del título principal */
+}
+
+.Contenido-Hero h2 {
+    margin-top: 1.5rem; /* Espacio superior para separar el subtítulo */
+    margin-bottom: 2rem; /* Espacio inferior para separar el subtítulo de la imagen */
+}
+
+.Contenido-Hero img {
+    margin-bottom: 2rem; /* Espacio debajo de la imagen */
+}
+
+.Ubicación {
+    margin-bottom: 2rem; /* Espacio debajo de la ubicación */
+}
+
+.Boton-catalogo {
+    margin-top: 1rem; /* Espacio superior para separar el botón de la ubicación */
+    display: inline-block;
+    padding: 1rem 2rem; /* Aumenta el padding para un botón más grande */
+    font-size: 1.2rem; /* Aumenta el tamaño del texto */
+    background-color: var(--Primario); /* Usa el color primario definido */
+    color: var(--Blanco); /* Color del texto */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+.contenedor.Sombra.tres-columnas {
+    margin-top: 3rem; /* Espacio superior para separar las secciones de "Mis servicios" del contenido hero */
+}
+
+main {
+    padding-top: 3rem; /* Aumenta el espacio en la parte superior de las secciones principales */
+    padding-bottom: 3rem; /* Aumenta el espacio en la parte inferior */
+}
+
+body {
+    background-color: #ADD8E6; /* Azul claro */
+}
+
+.ImagenPrincipalEdit {
+    background-repeat: no-repeat;
+    background-size: contain; /* Cambia 'cover' a 'contain' para mostrar la imagen completa */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+/* Aca */
+
+.ImagePrincipal_Verdad {
+    position: relative;
+    text-align: center;
+}
+
+.ImagenPrincipalEdit {
+    width: 100%; /* Se ajusta al contenedor */
+    height: 450px;
+    object-fit: cover;
+}
+
+.Ubicación {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+    color: #000000; /* Cambia el color si es necesario */
+    gap: 1rem; /* Espacio entre el icono y el texto */
+}
+
+.icon-tabler {
+    width: 4rem; /* Aumenta el tamaño del icono */
+    height: 4rem; /* Aumenta el tamaño del icono */}
+
+    .Logo {
+    display: flex; /* Usa Flexbox para facilitar el centrado */
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Centra el logo verticalmente */
+    margin: 1rem 0; /* Añade espacio arriba y abajo del logo */
+}
+
+.Logo_Clas {
+    width: 25%; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen del logo no se deforme */
+}
+</style>
 
 {% endblock %}

@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 
-{% block titulo %} Borrar metodo de Pago {% endblock %}
+{% block titulo %} Borrar método de pago {% endblock %}
 
 {% block contenido %} 
 
 <div class="card">
-    <div class="card-header">Borrar metodo de pago</div>
+    <div class="card-header">Borrar método de pago</div>
     <div class="card-body">
-        <h4 class="card-title">Datos del metodo de pago</h4>
-        
-        {% include 'MetodoPago/formMetodoPago.html' %}
+        <h4 class="card-title">¿Estás seguro de que deseas borrar este método de pago?</h4>
 
+        <p><strong>Nombre:</strong> {{ metodopago.Nombre }}</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Borrar</button>
+            <a href="{% url 'MetodoPago_1' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>

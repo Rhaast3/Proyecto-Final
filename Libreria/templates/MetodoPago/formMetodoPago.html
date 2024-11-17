@@ -1,13 +1,8 @@
-<form enctype="multipart/form-data" method="post">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
     <div class="mb-3">
-        <label for="" class="form-label">Nombre del metodo de pago</label>
-        <input type="text"
-            class="form-control" name="" id="" aria-describedby="helpId" placeholder="Metodo de pago">
-
+        <label for="id_Nombre" class="form-label">Nombre del método de pago</label>
+        {{ form.Nombre }}
     </div>
-    
-
-
-
-
+    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>

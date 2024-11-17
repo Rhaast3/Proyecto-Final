@@ -7,10 +7,17 @@
 <div class="card">
     <div class="card-header">Borrar empleado</div>
     <div class="card-body">
-        <h4 class="card-title">Datos del empleado</h4>
-        
-        {% include 'Empleados/FormEmpleado.html' %}
+        <h4 class="card-title">¿Estás seguro de que deseas borrar este empleado?</h4>
 
+        <p><strong>Nombre:</strong> {{ empleado.Nombre }}</p>
+        <p><strong>Usuario:</strong> {{ empleado.Usuario }}</p>
+        <p><strong>Rol:</strong> {{ empleado.Rol }}</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Borrar</button>
+            <a href="{% url 'Empleados' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>

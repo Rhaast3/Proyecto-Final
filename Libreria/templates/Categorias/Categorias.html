@@ -2,8 +2,7 @@
 
 {% block titulo %} Categorías {% endblock %}
 
-{% block contenido %} 
-
+{% block contenido %}
 <div class="card">
     <div class="card-header">
         <a name="" id="" class="btn btn-success" href="{% url 'CrearCategoria' %}" role="button">Agregar nueva categoría</a>
@@ -23,8 +22,8 @@
                     {% if categorias %}
                         {% for categoria in categorias %}
                             <tr>
-                                <td>{{ categoria.Nombre }}</td>
-                                <td>{{ categoria.Descripcion }}</td>
+                                <td>{{ categoria.nombre }}</td> <!-- Actualizado a minúsculas -->
+                                <td>{{ categoria.descripcion }}</td> <!-- Actualizado a minúsculas -->
                                 <td>
                                     <a name="" id="" class="btn btn-info" href="{% url 'EditarCategoria' categoria.id %}" role="button">Editar</a>
                                     |
@@ -44,5 +43,4 @@
     <div class="card-footer text-muted">
     </div>
 </div>
-
 {% endblock %}

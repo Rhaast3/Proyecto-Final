@@ -1,13 +1,33 @@
-<form enctype="multipart/form-data" method="post">
-    <div class="mb-3">
-        <label for="" class="form-label">Nombre de producto</label>
-        <input type="text"
-            class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre">
-
-    </div>
-    
-
-
-
-
-</form>
+<table class="table table-primary">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Empleados</th>
+            <th scope="col">Categoria</th> <!-- Encabezado para la categoría -->
+            <th scope="col">Imagen</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for producto in productos %}
+            <tr>
+                <td>{{ producto.Nombre }}</td>
+                <td>{{ producto.Precio }}</td>
+                <td>{{ producto.Empleados }}</td>
+                <td>{{ producto.Categoria.Nombre }}</td> <!-- Asegúrate de usar "Nombre" o el campo correcto de la categoría -->
+                <td>
+                    {% if producto.Imagen %}
+                        <img src="{{ producto.Imagen.url }}" alt="{{ producto.Nombre }}" width="100">
+                    {% else %}
+                        Sin imagen
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{% url 'EditarProducto' producto.id %}" class="btn btn-info">Editar</a> |
+                    <a href="{% url 'EliminarProducto' producto.id %}" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?');">Borrar</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

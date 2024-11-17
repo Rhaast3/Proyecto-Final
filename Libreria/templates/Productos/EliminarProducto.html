@@ -1,18 +1,25 @@
 {% extends "base.html" %}
 
-{% block titulo %} Borrar Producto {% endblock %}
+{% block titulo %}Borrar Producto{% endblock %}
 
 {% block contenido %} 
-
 <div class="card">
     <div class="card-header">Borrar producto</div>
     <div class="card-body">
-        <h4 class="card-title">Datos del producto</h4>
+        <h4 class="card-title">¿Estás seguro de que deseas borrar este producto?</h4>
         
-        {% include 'Productos/FormProducto.html' %}
-
+        <p><strong>Nombre:</strong> {{ producto.Nombre }}</p>
+        <p><strong>Precio:</strong> {{ producto.Precio }}</p>
+        <p><strong>Empleado:</strong> {{ producto.Empleados }}</p>
+        <p><strong>Categoría:</strong> {{ producto.Categoria }}</p>
+        <p><strong>Imagen:</strong> <img src="{{ producto.Imagen.url }}" alt="{{ producto.Nombre }}" width="100"></p>
+        
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Borrar</button>
+            <a href="{% url 'Productos' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>
-
 {% endblock %}

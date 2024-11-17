@@ -1,19 +1,18 @@
 {% extends "base.html" %}
 
-{% block titulo %} Crear Factura{% endblock %}
+{% block titulo %} Crear Factura de Pago {% endblock %}
 
 {% block contenido %} 
 
 <div class="card">
-    <div class="card-header">Agregar factura</div>
+    <div class="card-header">Agregar factura de pago</div>
     <div class="card-body">
-        <h4 class="card-title">Datos de la factura</h4>
+        <h4 class="card-title">Datos de la factura de pago</h4>
         
         {% include 'FacturaPagos/FormPago.html' %}
 
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>
-
 
 {% endblock %}

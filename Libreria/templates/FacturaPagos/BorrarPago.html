@@ -1,16 +1,24 @@
 {% extends "base.html" %}
 
-{% block titulo %} Borrar Pago {% endblock %}
+{% block titulo %} Borrar Factura de Pago {% endblock %}
 
 {% block contenido %} 
 
 <div class="card">
-    <div class="card-header">Borrar pago</div>
+    <div class="card-header">Borrar factura de pago</div>
     <div class="card-body">
-        <h4 class="card-title">Datos del pago</h4>
-        
-        {% include 'FacturaPagos/FormPago.html' %}
+        <h4 class="card-title">¿Estás seguro de que deseas borrar esta factura de pago?</h4>
 
+        <p><strong>Factura ID:</strong> {{ factura.id }}</p>
+        <p><strong>Cliente:</strong> {{ factura.cliente }}</p>
+        <p><strong>Fecha de pago:</strong> {{ factura.fecha_pago }}</p>
+        <p><strong>Valor:</strong> {{ factura.valor }}</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Borrar</button>
+            <a href="{% url 'FacturaPagos' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>

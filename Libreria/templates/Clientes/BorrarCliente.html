@@ -3,16 +3,22 @@
 {% block titulo %} Borrar Cliente {% endblock %}
 
 {% block contenido %} 
-
 <div class="card">
     <div class="card-header">Borrar cliente</div>
     <div class="card-body">
-        <h4 class="card-title">Datos del cliente</h4>
+        <h4 class="card-title">¿Estás seguro de que deseas borrar este cliente?</h4>
         
-        {% include 'Clientes/formCliente.html' %}
+        <p><strong>Nombre:</strong> {{ cliente.Nombre }}</p>
+        <p><strong>Email:</strong> {{ cliente.Correo }}</p>
+        <p><strong>Teléfono:</strong> {{ cliente.Identificacion }}</p>
+        <!-- Agrega más campos si es necesario -->
 
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Borrar</button>
+            <a href="{% url 'Clientes' %}" class="btn btn-secondary">Cancelar</a>  <!-- Cambia 'ruta_a_la_lista_de_clientes' por la URL adecuada -->
+        </form>
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>
-
 {% endblock %}

@@ -2,9 +2,368 @@
 
 {% block titulo %} Catalogo {% endblock %}
 
-{% block contenido %} 
+{% block contenido %}
 
-Seccion Catalogo
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="TituloPrincipal">Catalogo Principal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <h1 class="Titulo">Catalogo Principal</h1>
+
+    <div class="Logo">
+        <img class="Logo_Clas" src="{% static 'ImagenProduct/Logo.jpeg' %}" alt="Imagen Logo">
+    </div>
+
+</header>
+<body>
+
+    <main class="Informacion">
+        <h1>Nuestros productos</h1>
+        <div class="Grid">
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/GorraMonastey1.jpeg' %}" alt="Imagen gorra 1">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gorra monastery 1.1</p>
+                            <p class="Producto__precio">$75.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaBurberryMujer.jpeg' %}" alt="Imagen 2">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta mujer Burberry 1.1</p>
+                            <p class="Producto__precio">$85.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaBalenciagaMujer.jpeg' %}" alt="Imagen 3">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta mujer balenciaga 1.1</p>
+                            <p class="Producto__precio">$100.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaBurberryHombre.jpeg' %}" alt="Imagen 4">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta hombre burberry 1.1</p>
+                            <p class="Producto__precio">$90.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaLuisVuttonHombre.jpeg' %}" alt="Imagen 5">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta hombre Luis Vutton</p>
+                            <p class="Producto__precio">$80.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="ImagenAmbientadoraTienda1" style="grid-row: 2/3; grid-column: 1/3; ">
+                <img class="Producto__imagen_Ambientadora" src="{% static 'ImagenProduct/Ambientacion1.jpeg' %}" alt="Imagen Ambientación 1">
+            </div> <!--. Imagen Ambientadora 1-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaMonastery2.jpeg' %}" alt="Imagen 6">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta Monastery hombre </p>
+                            <p class="Producto__precio">$105.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaBossMujer.jpeg' %}" alt="Imagen 7">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta Boss Mujer</p>
+                            <p class="Producto__precio">$95.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaMonasteryMujer.jpeg' %}" alt="Imagen 8">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta Monastery Mujer</p>
+                            <p class="Producto__precio">$95.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaMujerMonastery2.jpeg' %}" alt="Imagen 9">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta Monastery mujer 2</p>
+                            <p class="Producto__precio">$90.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaMujerMonastery3.jpeg' %}" alt="Imagen 10">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta Monastery mujer 3</p>
+                            <p class="Producto__precio">$95.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaMonasteryHombre3.jpeg' %}" alt="Imagen 11">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta roja Monastery Hombre</p>
+                            <p class="Producto__precio">$82.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/SacoMonastery1.jpeg' %}" alt="Imagen 12">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Saco monastery 1.1</p>
+                            <p class="Producto__precio">$120.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/SacoMonastery2.jpeg' %}" alt="Imagen 13">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Saco monastery 2  1.1</p>
+                            <p class="Producto__precio">$115.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/Chanclas Boss.jpeg' %}" alt="Imagen 14">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Chanclas Boss</p>
+                            <p class="Producto__precio">$64.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/ChanclasBoss2.jpeg' %}" alt="Imagen 15">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Chanclas Boss 2</p>
+                            <p class="Producto__precio">$75.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/ChanclasBoss3.jpeg' %}" alt="Imagen 16">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Chanclas Boss 3</p>
+                            <p class="Producto__precio">$75.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/GorraBoss1.jpeg' %}" alt="Imagen 17">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gorra Boss 1.1</p>
+                            <p class="Producto__precio">$82.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/GorraBoss2.jpeg' %}" alt="Imagen 18">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gorra Boss 2 1.1</p>
+                            <p class="Producto__precio">$85.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/GorraBoss3.jpeg' %}" alt="Imagen 19">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gorra  Boss 3</p>
+                            <p class="Producto__precio">$90.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="ImagenAmbientadoraTienda1 ImagenAmbientadoraNum2" style="grid-row: 8/9; grid-column:1/3;">
+                <img class="Producto__imagen_Ambientadora ImagenAmbientadora2" src="{% static 'ImagenProduct/Ambientacion2.jpeg' %}" alt="Imagen Ambientación 2">
+            </div> <!--. Imagen Ambientadora 2-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/GorraBoss4.jpeg' %}" alt="Imagen 20">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gorra Boss 4 </p>
+                            <p class="Producto__precio">$75.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaHombreBossGris.jpeg' %}" alt="Imagen 21">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta Boss Gris</p>
+                            <p class="Producto__precio">$75.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaBossCafe.jpeg' %}" alt="Imagen 22">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta Boss Cafe 1.1</p>
+                            <p class="Producto__precio">$70.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaMonasteryJamesRodr.jpeg' %}" alt="Imagen 23">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta Monastery x James Rodriguez  1.1</p>
+                            <p class="Producto__precio">$120.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CamisetaMujerMonasteryAzul.jpeg' %}" alt="Imagen 24">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Camiseta Monastery Mujer Azul 1.1 </p>
+                            <p class="Producto__precio">$75.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/CanguroMonastery.jpeg' %}" alt="Imagen 25">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Canguro Monastery 1.1 </p>
+                            <p class="Producto__precio">$97.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/GorraBurberry1.jpeg' %}" alt="Imagen 25">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gorra Burberry 1.1 </p>
+                            <p class="Producto__precio">$105.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/Gafas1.jpeg' %}" alt="Imagen 26">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gafas 1 </p>
+                            <p class="Producto__precio">$75.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/Gafas5.jpeg' %}" alt="Imagen 27">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gafas exoticas guaracheras </p>
+                            <p class="Producto__precio">$80.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/GorraGoorin1.jpeg' %}" alt="Imagen 28">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gorra Gooring 1 </p>
+                            <p class="Producto__precio">$90.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+
+            <div class="Producto">
+                <img class="Producto__imagen" src="{% static 'ImagenProduct/GorraGoorin2.jpeg' %}" alt="Imagen 29">
+                        <div class="Producto__informacion">
+                            <p class="Producto__nombre">Gorra Gooring 2</p>
+                            <p class="Producto__precio">$90.000</p>
+                        </div>
+            </div>  <!--.Producto-->
+        
+        </div>
+
+
+        
+    </main>
+</body>
+
+<style>
+    :root{
+    --Blanco:#ffffff;
+    --Oscuro:#212121;
+    --Primario:#ffC107;
+    --Secundario: #0097A7;
+    --Gris: #757575;
+    --RojoDanger: #dc3545;
+    --FuentePrincipal: font-family: "Roboto Slab", serif;
+    --PrimarioOscuro: #b4aeae; /* Puedes cambiar este color por el que prefieras */
+    }
+
+    .Titulo{
+         text-align: center;
+    }
+
+
+    .Producto__imagen {
+    width: 80%; /* Ajusta el ancho para que la imagen se vea más grande dentro del producto */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un elemento de bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+    .Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta automáticamente a diferentes tamaños de pantalla */
+    gap: 2rem; /* Espacio entre los productos */
+}
+
+
+    .Producto {
+    background-color: var(--PrimarioOscuro); /* Color de fondo para cada producto */
+    padding: 1.5rem; /* Espacio interno para una mejor apariencia */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del producto */
+    text-align: center; /* Centra el contenido del producto */
+    font-weight: bold; /* Aplica negrita al texto */
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-direction: column; /* Coloca la imagen y el texto en una columna */
+    justify-content: space-between; /* Distribuye el espacio entre la imagen y el texto */
+    height: 100%; /* Asegura que el producto ocupe todo el espacio disponible */
+
+
+}
+
+.Producto__imagen_Ambientadora {
+    width: 80%; /* Reduce el ancho al 50% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.ImagenAmbientadora2 {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor para hacer la imagen más grande */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.Producto__nombre, .Producto__precio {
+    font-size: 1.2rem; /* Aumenta el tamaño de la letra */
+    font-weight: bold; /* Asegura que el texto esté en negrita */
+    margin: 0.5rem 0; /* Espacio superior e inferior para una mejor separación */
+}
+
+.Logo {
+    display: flex; /* Usa Flexbox para facilitar el centrado */
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Centra el logo verticalmente */
+    margin: 1rem 0; /* Añade espacio arriba y abajo del logo */
+}
+
+.Logo_Clas {
+    width: 20%; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen del logo no se deforme */
+}
+
+
+</style>
 
 
 {% endblock %}

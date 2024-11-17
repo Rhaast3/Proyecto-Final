@@ -1,16 +1,49 @@
 {% extends "base.html" %}
 
-{% block titulo %} Editar factura {% endblock %}
+{% block titulo %} Editar Factura de Pago {% endblock %}
 
 {% block contenido %} 
 
 <div class="card">
-    <div class="card-header">Editar factura</div>
+    <div class="card-header">Editar factura de pago</div>
     <div class="card-body">
-        <h4 class="card-title">Datos de la factura</h4>
+        <h4 class="card-title">Editar los datos de la factura de pago</h4>
         
-        {% include 'FacturaPagos/FormPago.html' %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_Fecha" class="form-label">Fecha</label>
+                {{ form.Fecha }}
+            </div>
 
+            <div class="mb-3">
+                <label for="id_CantidadProductos" class="form-label">Cantidad de Productos</label>
+                {{ form.CantidadProductos }}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_Valor" class="form-label">Valor</label>
+                {{ form.Valor }}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_Productos" class="form-label">Productos</label>
+                {{ form.Productos }}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_MetodoPago" class="form-label">Método de Pago</label>
+                {{ form.MetodoPago }}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_Clientes" class="form-label">Clientes</label>
+                {{ form.Clientes }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Actualizar Cambios</button>
+        </form>
+        
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>

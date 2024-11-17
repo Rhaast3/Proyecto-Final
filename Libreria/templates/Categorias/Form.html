@@ -1,13 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %}{{ titulo }}{% endblock %}  <!-- Título dinámico -->
+
+{% block contenido %}
 <form enctype="multipart/form-data" method="post">
+    {% csrf_token %}
     <div class="mb-3">
-        <label for="" class="form-label">Nombre de categoria</label>
-        <input type="text"
-            class="form-control" name="" id="" descripcion="" aria-describedby="helpId" placeholder="Nombre">
-
+        <label for="nombre" class="form-label">Nombre de categoría</label>
+        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="{{ form.nombre.value|default_if_none:'' }}">
     </div>
-    
 
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripción</label>
+        <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Descripción">{{ form.descripcion.value|default_if_none:'' }}</textarea>
+    </div>
 
-
-
+    <button type="submit" class="btn btn-primary">{{ boton_texto }}</button>  <!-- Botón dinámico -->
 </form>
+{% endblock %}

@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 
-{% block titulo %} Borrar Categoria {% endblock %}
+{% block titulo %}Borrar Categoría{% endblock %}
 
-{% block contenido %} 
-
+{% block contenido %}
 <div class="card">
-    <div class="card-header">Borrar categoria</div>
+    <div class="card-header">Borrar Categoría</div>
     <div class="card-body">
-        <h4 class="card-title">Datos de la categoria</h4>
-        
-        {% include 'Categorias/form.html' %}
+        <h4 class="card-title">¿Estás seguro de que deseas eliminar esta categoría?</h4>
+        <p><strong>Nombre:</strong> {{ categoria.nombre }}</p>
+        <p><strong>Descripción:</strong> {{ categoria.descripcion }}</p>
 
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="{% url 'Categorias' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>
-
 {% endblock %}

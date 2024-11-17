@@ -9,8 +9,27 @@
     <div class="card-body">
         <h4 class="card-title">Datos del cliente</h4>
         
-        {% include 'Clientes/formCliente.html' %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+                <label for="id_Nombre" class="form-label">Nombre del cliente</label>
+                {{ form.Nombre }}
+            </div>
 
+            <div class="mb-3">
+                <label for="id_Correo" class="form-label">Correo Electrónico</label>
+                {{ form.Correo }}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_Identificacion" class="form-label">Identificación</label>
+                {{ form.Identificacion }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Actualizar Cambios</button>
+        </form>
+        
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block titulo %} Crear empleado{% endblock %}
+{% block titulo %} Crear empleado {% endblock %}
 
 {% block contenido %} 
 
@@ -9,11 +9,28 @@
     <div class="card-body">
         <h4 class="card-title">Datos del empleado</h4>
         
-        {% include 'Empleados/FormEmpleado.html' %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_Nombre" class="form-label">Nombre del empleado</label>
+                {{ form.Nombre }}
+            </div>
 
+            <div class="mb-3">
+                <label for="id_Usuario" class="form-label">Usuario</label>
+                {{ form.Usuario }}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_Rol" class="form-label">Rol</label>
+                {{ form.Rol }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+        
     </div>
     <div class="card-footer text-muted">Footer</div>
 </div>
-
 
 {% endblock %}
